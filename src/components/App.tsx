@@ -28,6 +28,13 @@ export class App extends React.Component<IProps, IState> {
       this.setState({taskList: copy});
    }
 
+   toggleDone(index: number) {
+      var copy = this.state.taskList;
+      var item = this.state.taskList[index];
+      copy[index] = {taskid: item.taskid, taskvalue: item.taskvalue, done: !item.done};
+      this.setState({taskList: copy});
+   }
+
    handleAdd() {
       if (this.state.currentTask != "") {
          var task : Task = {taskid: this.getMaxId(), taskvalue: this.state.currentTask, done: false};
@@ -40,12 +47,13 @@ export class App extends React.Component<IProps, IState> {
          });
       }
    }
+   
    public render() {
       return (
          <div>
             <h1>React Typescript Todo List</h1>
             <TaskForm text={this.state.currentTask} handleAdd={this.handleAdd.bind(this)} handleChange={this.handleChange.bind(this)} />
-            <TaskTable taskList={this.state.taskList} handleDelete={this.handleDelete.bind(this)} />
+            <TaskTable taskList={this.state.taskList} handleDelete={this.handleDelete.bind(this)} toggleDone={this.toggleDone.bind(this)} />
          </div>
       )
    }

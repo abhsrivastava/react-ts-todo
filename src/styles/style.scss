@@ -1,7 +1,47 @@
 $background-grey: #f3f3f3;
+$button-grey: #5e5e5e;
+
 body {
    font-family: "Helvitica Neue", Helvitica, Arial, sans-serif;
    font-size: 15px;
    line-height: 1.3rem;
    background-color: $background-grey;
+}
+
+h1 {
+   border-bottom: 3px solid #000;
+   display: inline;
+}
+
+button {
+   height: 2.0rem;
+   border: none;
+   font-size: 1.0rem;
+   border-bottom: 4px solid #ccc;
+   margin-left: .5rem;
+   cursor: pointer;
+   color: $button-grey;
+}
+
+.container {
+   font-size: 1.3rem;
+}
+
+.is-completed {
+   text-decoration-line: line-through;
+   color: #00ff00;
+}
+
+.tdl-input {
+   padding-top: 10px;
+   display: inline;
+}
+
+.tdl-task {
+   padding: .5rem;
+}
+
+.formStyle {
+   margin-top: 3rem 10;
+   margin-bottom: 3rem 10;
 }
