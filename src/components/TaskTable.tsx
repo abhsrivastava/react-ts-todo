@@ -1,6 +1,7 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { Task } from './Models';
+import "../styles/style.scss";
 
 export class TaskTable extends React.Component<TableProps, any> {
    constructor(props: TableProps){

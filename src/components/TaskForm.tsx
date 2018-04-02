@@ -1,5 +1,6 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
+import "../styles/style.scss";
 
 export class TaskForm extends React.Component<any, any> {
    handleSubmit(e: React.FormEvent<HTMLFormElement>) : void {
