@@ -22,6 +22,7 @@ module.exports = {
          },
          {
             test: /\.scss$/,
+            include: [path.resolve(__dirname, "src/styles")],
             use: [
                MiniCssExtractPlugin.loader,
                {
