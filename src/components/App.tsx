@@ -51,7 +51,7 @@ export class App extends React.Component<IProps, IState> {
    public render() {
       return (
          <div>
-            <h1>React Typescript Todo List</h1>
+            <div className="heading"><h1>React Typescript Todo List</h1></div>
             <TaskForm text={this.state.currentTask} handleAdd={this.handleAdd.bind(this)} handleChange={this.handleChange.bind(this)} />
             <TaskTable taskList={this.state.taskList} handleDelete={this.handleDelete.bind(this)} toggleDone={this.toggleDone.bind(this)} />
          </div>

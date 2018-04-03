@@ -22,18 +22,22 @@ module.exports = {
          },
          {
             test: /\.scss$/,
-            include: [path.resolve(__dirname, "src/styles")],
             use: [
                MiniCssExtractPlugin.loader,
                {
-                 loader: "css-loader",
-                 options: {
-                   modules: true,
-                   sourceMap: true,
-                   importLoader: 2
-                 }
+                  loader: "css-loader",
+                  options: {
+                    sourceMap: true,
+                    importLoader: 2
+                  }                  
                },
-               "sass-loader"
+               {
+                  loader: 'sass-loader',
+                   options: {
+                       sourceMap: true
+                   }
+               },            
+               'import-glob-loader' 
             ]
          }
       ]

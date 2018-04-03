@@ -10,7 +10,7 @@ export class TaskForm extends React.Component<any, any> {
    
    render() : JSX.Element {
       return (
-         <div className="formStyle">
+         <div className="form-style">
             <form onSubmit={(e) => this.handleSubmit(e)}>
                <input 
                type="text" 
